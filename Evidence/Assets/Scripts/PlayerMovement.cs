@@ -67,12 +67,12 @@ public class PlayerMovement : MonoBehaviour
     public Joystick joystick;
     private void MyInput()
     {
-        //x = joystick.Horizontal;
-        //y = joystick.Vertical;
+        x = joystick.Horizontal;
+        y = joystick.Vertical;
         
             
-        x = Input.GetAxisRaw("Horizontal");
-        y = Input.GetAxisRaw("Vertical");
+        //x = Input.GetAxisRaw("Horizontal");
+        //y = Input.GetAxisRaw("Vertical");
         
         
         crouching = Input.GetKey(KeyCode.LeftControl);
