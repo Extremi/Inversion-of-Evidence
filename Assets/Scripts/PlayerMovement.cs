@@ -65,6 +65,8 @@ public class PlayerMovement : MonoBehaviour
     /// Find user input. Should put this in its own class but im lazy
     /// </summary>
     public Joystick joystick;
+    public crouchButton crouchButton;
+    public ButtonUi buttonUi;
     private void MyInput()
     {
         x = joystick.Horizontal;
@@ -78,10 +80,16 @@ public class PlayerMovement : MonoBehaviour
         crouching = Input.GetKey(KeyCode.LeftControl);
 
         //Crouching
-        if (Input.GetKeyDown(KeyCode.LeftControl))
+        //if (Input.GetKeyDown(KeyCode.LeftControl))
+        if ( == true)
+        {
             StartCrouch();
-        if (Input.GetKeyUp(KeyCode.LeftControl))
+        }
+        //if (Input.GetKeyUp(KeyCode.LeftControl))
+        if ( == false)
+        {
             StopCrouch();
+        }
     }
 
     private void StartCrouch()
